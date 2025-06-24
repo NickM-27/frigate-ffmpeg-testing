@@ -1,5 +1,3 @@
-Absolutely\! Here's the README in Markdown format, ready for you to copy and paste:
-
 -----
 
 # go2rtc-ffmpeg-debugger

@@ -11,7 +11,7 @@ This repository provides a simple setup to test `go2rtc` with `ffmpeg`, facilita
 To get started, clone the repository and run the setup script:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/NickM-27/frigate-ffmpeg-testing.git
 cd go2rtc-ffmpeg-debugger
 ./setup.sh
 ```

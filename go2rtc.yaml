@@ -1,0 +1,23 @@
+log:
+  format: text
+
+ffmpeg:
+  global: -hide_banner -threads 1
+  output: -threads 1 -user_agent ffmpeg/go2rtc -rtsp_transport tcp -f rtsp 
+    {output}
+
+  bin: bin/ffmpeg
+
+rtsp:
+  default_query: video&audio
+
+streams:
+
+  reolink_http:
+      - "ffmpeg:http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=username&password=password#video=copy#audio=copy#audio=opus"
+  reolink_http_ext:
+      - "ffmpeg:http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user=username&password=password"
+  reolink_rtsp:
+      - rtsp://username:password@reolink_ip/Preview_01_main
+  reolink_rtsp_sub:
+      - rtsp://username:password@reolink_ip/Preview_01_sub
